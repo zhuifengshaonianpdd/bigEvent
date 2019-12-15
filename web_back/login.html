@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -25,11 +26,40 @@
                 <i class="iconfont icon-key"></i>
                 <input type="text" class="input_txt" placeholder="邮箱/手机号">
                 <input type="password" class="input_pass" placeholder="密码">
-                <input type="submit" class="input_sub" value="登 录">
+                <input type="button" class="input_sub" value="登 录">
             </form>
         </div>
 
-    </div> 
+    </div>
+
+    <script>
+        var $username = $(".input_txt");
+        var $password = $(".password");
+        $(".input_sub").on("click", function () {
+            var user_name = $username.val().trim();
+            var password = $password.val().trim();
+            if (user_name === "" || password === "") {
+                alert("请填写完整信息！~")
+                return;
+            }
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8000/admin/login",
+                data: {
+                    username: user_name,
+                    password: password
+                },
+                success: function (res) {
+                    if (res.code === 200) {
+                        location.href = './index.html'
+                    } else {
+                        alert("密码或账号输入错误")
+                    }
+                }
+            })
+        })
+    </script>
+
 
 </body>
 
