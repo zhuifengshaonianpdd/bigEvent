@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="./js/bootstrap/css/bootstrap.min.css">
     <script src="./js/jquery-1.12.4.min.js"></script>
 </head>
 
@@ -32,29 +33,55 @@
 
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示信息</h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/tool/user.js"></script>
+    <script src="./js/tool/config.js"></script>
     <script>
-        var $username = $(".input_txt");
-        var $password = $(".password");
+        var $input_txt = $(".input_txt");
+        var $input_pass = $(".input_pass");
+        var $myModal = $("#myModal");
         $(".input_sub").on("click", function () {
-            var user_name = $username.val().trim();
-            var password = $password.val().trim();
+            var user_name = $input_txt.val().trim();
+            var password = $input_pass.val().trim();
             if (user_name === "" || password === "") {
-                alert("请填写完整信息！~")
+                // alert("请填写完整信息！~")
+                $myModal.modal("show").find(".modal-body").text("请填写完整信息！~")
                 return;
             }
-            $.ajax({
-                type: "post",
-                url: "http://localhost:8000/admin/login",
+            user.login({
                 data: {
                     username: user_name,
                     password: password
                 },
-                success: function (res) {
-                    if (res.code === 200) {
-                        location.href = './index.html'
-                    } else {
-                        alert("密码或账号输入错误")
-                    }
+                success: function () {
+                    location.href = './index.html'
+                },
+                fail: function () {
+                    $myModal.modal("show").find(".modal-body").text("密码或账号输入错误")
                 }
             })
         })
