@@ -132,7 +132,7 @@
         user.getUser({
             success: function (data) {
                 $(".user_info img", ".user_center_link img").prop("src", data.user_pic);
-                $(".user_info span").text("欢迎 " + data.nickname);
+                $(".user_info span").text("欢迎 " + data.nickname)
             }
         })
     </script>
