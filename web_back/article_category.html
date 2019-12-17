@@ -133,7 +133,8 @@
             }
         })      
     </script> -->
-
+    <script src="./js/tool/config.js"></script>
+    <script src="./js/tool/user.js"></script>
     <script src="./js/template-web.js"></script>
     <script id="category" type="text/template">
         {{each data val}}
@@ -155,16 +156,12 @@
 
     <script>
         // 提交申请获取展示数据
-        $.ajax({
-            type: "get",
-            url: "http://localhost:8000/admin/category_search",
+        user.infoShow({
             success: function (res) {
-                if (res.code === 200) {
-                    var htmlStr = template("category", res);
-                    $("#tbody").html(htmlStr)
-                }
+                var htmlStr = template("category", res);
+                $("#tbody").html(htmlStr)
             }
-        })
+        });
         // 给新增按钮注册点击事件弹出新事件
         $("#modal_add").on("click", function () {
             var nameVal = $("#name").val().trim();
@@ -173,18 +170,14 @@
                 alert("请完整填写信息！~");
                 return
             }
-            $.ajax({
-                type: "post",
-                url: "http://localhost:8000/admin/category_add",
+            user.infoAdd({
                 data: $("form").serialize(),
-                success: function (res) {
-                    if (res.code === 200) {
-                        location.reload()
-                    } else {
-                        // 如果添加失败有可能是因为名字重复，提示即可
-                        alert("您输入的信息重复");
-                        $("form")[0].reset()
-                    }
+                success: function () {
+                    location.reload()
+                },
+                fail: function () {
+                    alert("您输入的信息重复");
+                    $("form")[0].reset()
                 }
             })
         })
@@ -213,19 +206,15 @@
         })
         // 然后点击提交编辑按钮把所有的值提交上去
         $("#modal_edit").on("click", function () {
-            $.ajax({
-                type: "post",
-                url: "http://localhost:8000/admin/category_edit",
+            user.infoEdit({
                 data: $("form").serialize(),
-                success: function (res) {
-                    if (res.code === 200) {
-                        location.reload();
-                    } else {
-                        alert("编辑失败了")
-                    }
+                success: function () {
+                    location.reload();
+                },
+                fail: function () {
+                    alert("编辑失败了")
                 }
             })
-
         })
 
 
@@ -234,17 +223,12 @@
         $("#tbody").on("click", ".del", function () {
             var id = $(this).data("id");
             // 发送请求把对应id的数据删除
-            $.ajax({
-                type: "post",
-                url: "http://localhost:8000/admin/category_delete",
+            user.infoDel({
                 data: {
                     id: id
                 },
-
-                success: function (res) {
-                    if (res.code === 200) {
-                        location.reload()
-                    }
+                success: function () {
+                    location.reload()
                 }
             })
         })
