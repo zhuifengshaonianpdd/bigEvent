@@ -23,18 +23,20 @@
                 <div class="col-xs-6">
                     <form class="form-inline">
                         <select id="selCategory" name="" class="form-control input-sm">
-                            <option>所有分类</option>
-                            <option>未分类</option>
-                            <option>奇趣事</option>
-                            <option>会生活</option>
-                            <option>爱旅行</option>
+                            <option value="">所有分类</option>
+                            <!-- 创建下拉菜单的模板 -->
+                            <!-- <option value="1">未分类</option>
+                            <option value="2">奇趣事</option>
+                            <option value="3">会生活</option>
+                            <option value="4">爱旅行</option> -->
                         </select>
                         <select id="selStatus" name="" class="form-control input-sm">
-                            <option>所有状态</option>
-                            <option value="drafted">草稿</option>
-                            <option value="published">已发布</option>
+                            <!-- 固定值不需要创建 -->
+                            <option value="">所有状态</option>
+                            <option value="草稿">草稿</option>
+                            <option value="已发布">已发布</option>
                         </select>
-                        <button id="btnSearch" class="btn btn-default btn-sm">筛选</button>
+                        <button id="btnSearch" type="button" class="btn btn-default btn-sm">筛选</button>
                     </form>
                 </div>
                 <div class="col-xs-6">
@@ -57,178 +59,7 @@
 
 
 
-                    <tr>
-                        
-                        <td>王积千造统最头</td>
-                        <td>杰克</td>
-                        <td>奇趣事</td>
-                        <td class="text-center">2017-06-08 07:08:46</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="article_edit.html" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1005 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                     
-                        <td>级电使正回</td>
-                        <td>肉丝</td>
-                        <td>爱旅行</td>
-                        <td class="text-center">2017-06-06 10:45:24</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="article_edit.html" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1004 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                       
-                        <td>近难领管年算</td>
-                        <td>杰克</td>
-                        <td>会生活</td>
-                        <td class="text-center">2017-05-27 16:49:04</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="article_edit.html" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1003 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                       
-                        <td>龙大实究</td>
-                        <td>杰克</td>
-                        <td>未分类</td>
-                        <td class="text-center">2017-04-13 10:43:41</td>
-
-
-                        <td class="text-center">草稿</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=1002" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1002 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                      
-                        <td>算性得走来拉</td>
-                        <td>肉丝</td>
-                        <td>奇趣事</td>
-                        <td class="text-center">2017-04-06 04:58:12</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=1001" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1001 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                      
-                        <td>几平会出气</td>
-                        <td>管理员</td>
-                        <td>奇趣事</td>
-                        <td class="text-center">2017-04-03 20:16:34</td>
-
-
-                        <td class="text-center">草稿</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=1000" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 1000 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                      
-                        <td>世团先证型角</td>
-                        <td>杰克</td>
-                        <td>奇趣事</td>
-                        <td class="text-center">2017-04-03 14:40:08</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=999" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 999 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                      
-                        <td>构更反步五</td>
-                        <td>肉丝</td>
-                        <td>奇趣事</td>
-                        <td class="text-center">2017-03-30 22:31:52</td>
-
-
-                        <td class="text-center">已发布</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=998" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 998 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
-                       
-                        <td>组方些</td>
-                        <td>肉丝</td>
-                        <td>会生活</td>
-                        <td class="text-center">2017-02-08 05:38:43</td>
-
-
-                        <td class="text-center">草稿</td>
-
-
-                        <td class="text-center">
-                            <a href="post-edit.html?id=996" class="btn btn-default btn-xs">编辑</a>
-                            <a href="javascript:deleteTr( 996 );" class="btn btn-danger btn-xs">删除</a>
-                        </td>
-                    </tr>
-
-
-
-                    <tr>
+                    <!-- <tr>
                       
                         <td>日做发光成</td>
                         <td>管理员</td>
@@ -243,37 +74,133 @@
                             <a href="post-edit.html?id=995" class="btn btn-default btn-xs">编辑</a>
                             <a href="javascript:deleteTr( 995 );" class="btn btn-danger btn-xs">删除</a>
                         </td>
-                    </tr>
+                    </tr> -->
 
 
                 </tbody>
             </table>
 
             <div class="row text-center">
-            <ul class="pagination pagination-sm">
-                <li class="page-item first disabled"><a href="#" class="page-link">首页</a></li>
-                <li class="page-item prev disabled"><a href="#" class="page-link">上一页</a></li>
-                <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link">4</a></li>
-                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                <li class="page-item"><a href="#" class="page-link">6</a></li>
-                <li class="page-item"><a href="#" class="page-link">7</a></li>
-                <li class="page-item next"><a href="#" class="page-link">下一页</a></li>
-                <li class="page-item last"><a href="#" class="page-link">尾页</a></li>
-            </ul>
-        </div>
+                <ul class="pagination pagination-sm" id="list">
+                    <li class="page-item first disabled"><a href="#" class="page-link">首页</a></li>
+                    <li class="page-item prev disabled"><a href="#" class="page-link">上一页</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link">6</a></li>
+                    <li class="page-item"><a href="#" class="page-link">7</a></li>
+                    <li class="page-item next"><a href="#" class="page-link">下一页</a></li>
+                    <li class="page-item last"><a href="#" class="page-link">尾页</a></li>
+                </ul>
+            </div>
 
         </div>
     </div>
 
     <script>
         // 设置左侧菜单
-        $('#release_btn').click(function(){
-            window.parent.setMenu(1,1);
+        $('#release_btn').click(function () {
+            window.parent.setMenu(1, 1);
         })
     </script>
+
+
+    <script src="./js/template-web.js"></script>
+    <script src="./js/jquery.twbsPagination.js"></script>
+    <script src="./js/tool/config.js"></script>
+    <script src="./js/tool/user.js"></script>
+
+    <!-- 导入页码插件js，实现页码分类 -->
+
+    <script type="text/template" id="article">
+    <!-- 制作模板引擎，用来生成结构 -->
+    {{each data val}}
+    <tr>
+        <!-- 将各个结构数据导入 -->
+        <td>{{val.title}}</td>
+        <td>{{val.author}}</td>
+        <td>{{val.type}}</td>
+        <td class="text-center">{{val.date}}</td>
+        <td class="text-center">{{val.state}}</td>
+        <td class="text-center">
+            <a href="post-edit.html?id=996" class="btn btn-default btn-xs">编辑</a>
+            <a href="javascript:deleteTr( 996 );" class="btn btn-danger btn-xs">删除</a>
+        </td>
+    </tr>
+    {{/each}}
+    </script>
+    <!-- 设置下拉菜单的模板 -->
+    <script type="text/template" id="category">
+        {{each data val}}
+        <option value="{{val.id}}">{{val.name}}</option>
+        {{/each}}
+    </script>
+
+
+    <script>
+
+        arcleShow()
+
+        var page = 1;
+        var lastTotalPage = 0;
+        var $list = $("#list");
+        // 调用书籍分类封装好的方法来进行添加下拉列表
+        user.infoShow({
+            success: function (res) {
+                $("#selCategory").append(template("category", res))
+            }
+        });
+        $("#btnSearch").on("click", function () {
+            arcleShow();
+            $(".first").click()
+        })
+        // 给当前页码设置为1，定义page，可选择
+        function arcleShow() {
+            // 请求数据显示文章信息
+            $.ajax({
+                // 方式：获取信息，使用get请求
+                type: "get",
+                url: "http://localhost:8000/admin/search",
+                data: {
+                    page: page,
+                    type: $("#selCategory").val(),
+                    state: $("#selStatus").val()
+                },
+                success: function (res) {
+                    if (res.code === 200) {
+                        // 如果判断生效，那么表体元素中通过模板引擎来生成页面结构
+                        $("tbody").html(template("article", res))
+                        var totalPage = res.totalPage;
+                        if (totalPage === lastTotalPage) {
+                            return
+                        }
+                        lastTotalPage = totalPage;
+                        $list.twbsPagination("destroy");
+                        $list.twbsPagination({
+                            totalPages: totalPage,
+                            visiblePages: 8,
+                            first: '首页',
+                            last: '尾页',
+                            prev: '上一页',
+                            next: '下一页',
+                            onPageClick: function (e, currentPage) {
+                                page = currentPage;
+                                arcleShow()
+                            }
+                        })
+                    }
+                }
+            })
+
+
+        }
+    </script>
+
+
+
+
 
 </body>
 
